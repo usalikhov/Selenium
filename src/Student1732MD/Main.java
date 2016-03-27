@@ -18,18 +18,15 @@ public class Main {
         WebDriver driver = new FirefoxDriver();
         Actions action = new Actions(driver);
 
-        driver.get("https://accounts.google.com/signup");
+        driver.get("https://ebay.com");
         driver.manage().window().maximize();
+        System.out.println(driver.findElements(By.tagName("a")).size());
+        WebElement footer = driver.findElement(By.xpath(".//*[@id='glbfooter']"));
 
-        driver.findElement(By.xpath(".//*[@id='wrapper']/div[2]/div/div[1]/p/a")).click();
-        System.out.println(driver.getTitle());
+        for (int i = 0; i < footer.findElements(By.tagName("a")).size(); i++) {
 
-        Set<String> ids = driver.getWindowHandles();
-        Iterator<String> it = ids.iterator();
-        String parentId = it.next();
-        String childId = it.next();
-        driver.switchTo().window(childId);
-        System.out.println(driver.getTitle());
+            System.out.println(footer.findElements(By.tagName("a")).get(i).getText());
+        }
 
     }
 }
