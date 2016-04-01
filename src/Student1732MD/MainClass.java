@@ -19,12 +19,9 @@ public class MainClass {
 //        JavaClass jc = new JavaClass();
 
         int number1 = 0, number2 = 1, number3;
-        Integer a;
-        String asdf;
         System.out.print(number1 + " " + number2);
 
-        for (int i = 2; i < 15; i++)
-        {
+        for (int i = 2; i < 15; i++) {
             number3 = number1 + number2;
             System.out.print(" " + number3);
             number1 = number2;
