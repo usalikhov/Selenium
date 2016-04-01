@@ -1,7 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Student1732MD;
 
-import java.util.Iterator;
-import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,14 +13,14 @@ import org.openqa.selenium.interactions.Actions;
 
 /**
  *
- * @author 1732MD
+ * @author Lenovo-Yoga2
  */
-public class Main {
+public class SeleniumClass {
 
-    public static void main(String[] args) {
-        WebDriver driver = new FirefoxDriver();
-        Actions action = new Actions(driver);
+    WebDriver driver = new FirefoxDriver();
+    Actions action = new Actions(driver);
 
+    public SeleniumClass() {
         driver.get("https://ebay.com");
         driver.manage().window().maximize();
         System.out.println(driver.findElements(By.tagName("a")).size());
@@ -27,6 +30,5 @@ public class Main {
 
             System.out.println(footer.findElements(By.tagName("a")).get(i).getText());
         }
-
     }
 }
