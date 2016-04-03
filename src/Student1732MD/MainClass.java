@@ -21,6 +21,9 @@ public class MainClass {
     public static void main(String[] args) {
 //        SeleniumClass sc = new SeleniumClass();
 //        JavaClass jc = new JavaClass();
-
+        ShowMonth sm = new ShowMonth();
+        
+        sm.WhichMonthIsIt(ShowMonth.Month.January);
     }
+
 }
