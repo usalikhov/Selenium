@@ -5,10 +5,13 @@
  */
 package Student1732MD;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 /**
@@ -20,15 +23,27 @@ public class SeleniumClass {
     WebDriver driver = new FirefoxDriver();
     Actions action = new Actions(driver);
 
-    public SeleniumClass() {
-        driver.get("https://ebay.com");
+    public SeleniumClass() throws InterruptedException {
+        driver.get("http://facebook.com/");
         driver.manage().window().maximize();
-        System.out.println(driver.findElements(By.tagName("a")).size());
-        WebElement footer = driver.findElement(By.xpath(".//*[@id='glbfooter']"));
 
-        for (int i = 0; i < footer.findElements(By.tagName("a")).size(); i++) {
-
-            System.out.println(footer.findElements(By.tagName("a")).get(i).getText());
-        }
+        WebElement txtUserName = driver.findElement(By.id("email"));
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(1000);
+        Action seriesOfActions = action
+                .moveToElement(txtUserName)
+                .click()
+                .keyDown(txtUserName, Keys.SHIFT)
+                .sendKeys(txtUserName, "hello")
+                .keyUp(txtUserName, Keys.SHIFT)
+                .doubleClick(txtUserName)
+                .contextClick()
+                .build();
+        
+        seriesOfActions.perform();
+        
+        
+        
+        
     }
 }

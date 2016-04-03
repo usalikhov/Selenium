@@ -1,6 +1,10 @@
 package Student1732MD;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,16 +21,6 @@ public class MainClass {
     public static void main(String[] args) {
 //        SeleniumClass sc = new SeleniumClass();
 //        JavaClass jc = new JavaClass();
-
-        int number1 = 0, number2 = 1, number3;
-        System.out.print(number1 + " " + number2);
-
-        for (int i = 2; i < 15; i++) {
-            number3 = number1 + number2;
-            System.out.print(" " + number3);
-            number1 = number2;
-            number2 = number3;
-        }
 
     }
 }

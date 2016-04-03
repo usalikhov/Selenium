@@ -3,10 +3,6 @@ package Homeworks_1732MD;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- *
- * @author Lenovo-Yoga2
- */
 public class ArrayListClass {
 
     private ArrayList _list;
@@ -23,8 +19,8 @@ public class ArrayListClass {
             _list.add(_random.nextInt());
         }
     }
-    
-    public void ShowTheList(){
+
+    public void ShowTheList() {
         for (int i = 0; i < _list.size(); i++) {
             System.out.println(_list.get(i));
         }
