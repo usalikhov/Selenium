@@ -24,8 +24,32 @@ public class ShowMonth {
             case April:
                 System.out.println("Month is April");
                 break;
-default:
-    System.out.println("sos");
+            case May:
+                System.out.println("Month is May");
+                break;
+            case June:
+                System.out.println("Month is June");
+                break;
+            case July:
+                System.out.println("Month is July");
+                break;
+            case August:
+                System.out.println("Month is August");
+                break;
+            case September:
+                System.out.println("Month is September");
+                break;
+            case October:
+                System.out.println("Month is October");
+                break;
+            case November:
+                System.out.println("Month is November");
+                break;
+            case December:
+                System.out.println("Month is December");
+                break;
+            default:
+                System.out.println("sos");
         }
     }
 
